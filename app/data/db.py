@@ -4,8 +4,10 @@ from fastapi import Depends
 import os
 from faker import Faker
 from app.config import config
-# TODO: remember to import all the DB models here
+# Import di tutti i modelli: servono a SQLModel per creare le tabelle.
 from app.models.registration import Registration  # NOQA
+from app.models.event import Event  # NOQA
+from app.models.user import User  # NOQA
 
 
 sqlite_file_name = config.root_dir / "data/database.db"
